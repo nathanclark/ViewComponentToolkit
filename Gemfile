@@ -8,3 +8,9 @@ gemspec
 gem "rake", "~> 13.0"
 
 gem "minitest", "~> 5.0"
+
+# Add development dependencies
+group :development do
+gem 'htmlbeautifier' # HTML Beautifier
+gem 'robocop' # RuboCop
+end  
