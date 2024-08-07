@@ -8,10 +8,12 @@ require_relative '../config/application'
 class ApplicationController < ActionController::Base
 end
 
+# Create a minimal controller-like environment
 class TestController < ApplicationController
   include ActionView::Context
 end
 
+# Configure RSpec to include the ViewComponent::TestHelpers
 RSpec.configure do |config|
   config.include ViewComponent::TestHelpers
   config.before(:each, type: :component) do

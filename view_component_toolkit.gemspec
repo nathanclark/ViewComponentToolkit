@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+  spec.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   ## DEPENDENCIES
   spec.add_dependency 'rails', '>= 7.0'
@@ -37,6 +38,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'actionview'
   spec.add_development_dependency 'activesupport'
   spec.add_development_dependency 'actionpack'
-spec.add_development_dependency 'railties'
+  spec.add_development_dependency 'railties'
   spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'lookbook', '~> 2.0'
 end

@@ -1,0 +1,193 @@
+Initializing websocket
+Initializing websocket
+Started GET "/" for 127.0.0.1 at 2024-08-07 15:43:01 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 346)
+Completed 200 OK in 22ms (Views: 4.5ms | Allocations: 5333)
+
+
+Started GET "/lookbook" for 127.0.0.1 at 2024-08-07 15:43:09 -0500
+Processing by Lookbook::ApplicationController#index as HTML
+  Rendering layout /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/lookbook/index.html.erb within layouts/lookbook/application
+  Rendered /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/lookbook/partials/_blank_slate.html.erb (Duration: 13.0ms | Allocations: 4755)
+  Rendered /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/lookbook/index.html.erb within layouts/lookbook/application (Duration: 13.8ms | Allocations: 5399)
+  Rendered /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/lookbook/partials/_user_styles.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendering /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/layouts/lookbook/skeleton.html.erb
+  Rendered /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/layouts/lookbook/skeleton.html.erb (Duration: 13.3ms | Allocations: 20319)
+  Rendered layout /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/layouts/lookbook/application.html.erb (Duration: 95.6ms | Allocations: 46762)
+Completed 200 OK in 99ms (Views: 97.6ms | Allocations: 48422)
+
+
+Started GET "/lookbook-assets/css/lookbook.css?v=2.3.2" for 127.0.0.1 at 2024-08-07 15:43:09 -0500
+Started GET "/lookbook-assets/css/themes/indigo.css?v=2.3.2" for 127.0.0.1 at 2024-08-07 15:43:09 -0500
+Started GET "/lookbook-assets/img/lucide-sprite.svg" for 127.0.0.1 at 2024-08-07 15:43:10 -0500
+Started GET "/lookbook-assets/js/lookbook.js?v=2.3.2" for 127.0.0.1 at 2024-08-07 15:43:10 -0500
+Started GET "/lookbook-assets/js/index.js?v=2.3.2" for 127.0.0.1 at 2024-08-07 15:43:10 -0500
+Started GET "/lookbook-assets/Inter-roman.var.b695afbe.woff2" for 127.0.0.1 at 2024-08-07 15:43:10 -0500
+Started GET "/lookbook-assets/Inter-italic.var.69eb0fe1.woff2" for 127.0.0.1 at 2024-08-07 15:43:10 -0500
+Started GET "/lookbook/cable?uid=1723063390206" for 127.0.0.1 at 2024-08-07 15:43:10 -0500
+Started GET "/lookbook/cable/?uid=1723063390206" [WebSocket] for 127.0.0.1 at 2024-08-07 15:43:10 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] connected to Lookbook
+[1723063390206] Registered connection (1723063390206)
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+Started GET "/view_component_toolkit/lookbook/inspect/view_component_toolkit/button/default" for 127.0.0.1 at 2024-08-07 15:43:14 -0500
+Processing by Lookbook::InspectorController#show as */*
+  Parameters: {"path"=>"view_component_toolkit/button/default"}
+Processing by ViewComponentsController#render_scenario_to_string as */*
+  Parameters: {"path"=>"view_component_toolkit/button/default"}
+  Rendering /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/lookbook/previews/preview.html.erb
+  Rendered /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/lookbook/previews/preview.html.erb (Duration: 2.7ms | Allocations: 1441)
+Completed 500 Internal Server Error in 5ms (Allocations: 2758)
+
+
+  Rendering layout /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/lookbook/errors/default.html.erb within layouts/lookbook/application
+  Rendered /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/lookbook/errors/default.html.erb within layouts/lookbook/application (Duration: 241.4ms | Allocations: 342151)
+  Rendered layout /home/nathan/.rbenv/versions/3.3.2/lib/ruby/gems/3.3.0/gems/lookbook-2.3.2/app/views/layouts/lookbook/application.html.erb (Duration: 241.7ms | Allocations: 342255)
+Completed 500 Internal Server Error in 257ms (Views: 242.5ms | Allocations: 349004)
+
+
+Started GET "/lookbook-assets/SourceCodeVariable-Roman.ttf.118e9f22.woff2" for 127.0.0.1 at 2024-08-07 15:43:14 -0500
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+Started GET "/lookbook/cable?uid=1723063390206" for 127.0.0.1 at 2024-08-07 15:43:16 -0500
+Started GET "/lookbook/cable/?uid=1723063390206" [WebSocket] for 127.0.0.1 at 2024-08-07 15:43:16 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] connected to Lookbook
+[1723063390206] Registered connection (1723063390206)
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+Started GET "/lookbook/cable?uid=1723063390206" for 127.0.0.1 at 2024-08-07 15:43:19 -0500
+Started GET "/lookbook/cable/?uid=1723063390206" [WebSocket] for 127.0.0.1 at 2024-08-07 15:43:19 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] connected to Lookbook
+[1723063390206] Registered connection (1723063390206)
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+Started GET "/lookbook/cable?uid=1723063390206" for 127.0.0.1 at 2024-08-07 15:43:25 -0500
+Started GET "/lookbook/cable/?uid=1723063390206" [WebSocket] for 127.0.0.1 at 2024-08-07 15:43:25 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] connected to Lookbook
+[1723063390206] Registered connection (1723063390206)
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+Started GET "/lookbook/cable?uid=1723063390206" for 127.0.0.1 at 2024-08-07 15:43:32 -0500
+Started GET "/lookbook/cable/?uid=1723063390206" [WebSocket] for 127.0.0.1 at 2024-08-07 15:43:32 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] connected to Lookbook
+[1723063390206] Registered connection (1723063390206)
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+Started GET "/lookbook/cable?uid=1723063390206" for 127.0.0.1 at 2024-08-07 15:43:40 -0500
+Started GET "/lookbook/cable/?uid=1723063390206" [WebSocket] for 127.0.0.1 at 2024-08-07 15:43:40 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] connected to Lookbook
+[1723063390206] Registered connection (1723063390206)
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+Started GET "/lookbook/cable?uid=1723063390206" for 127.0.0.1 at 2024-08-07 15:43:49 -0500
+Started GET "/lookbook/cable/?uid=1723063390206" [WebSocket] for 127.0.0.1 at 2024-08-07 15:43:49 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] connected to Lookbook
+[1723063390206] Registered connection (1723063390206)
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+Started GET "/lookbook/cable?uid=1723063390206" for 127.0.0.1 at 2024-08-07 15:43:59 -0500
+Started GET "/lookbook/cable/?uid=1723063390206" [WebSocket] for 127.0.0.1 at 2024-08-07 15:43:59 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] connected to Lookbook
+[1723063390206] Registered connection (1723063390206)
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil
+[1723063390206] WebSocket error occurred: undefined method `write_nonblock' for nil

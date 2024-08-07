@@ -14,11 +14,16 @@ gem 'view_component_toolkit'
 
 And then execute:
 
-    $ bundle install
+    bundle install
 
 Or install it yourself as:
 
-    $ gem install view_component_toolkit
+    gem install view_component_toolkit
+
+1. Add Lookbook to your Gemfile:
+
+   ```ruby
+   gem 'lookbook', group: :development
 
 ## Usage
 
@@ -32,7 +37,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/view_component_toolkit.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/[USERNAME]/view_component_toolkit>.
 
 ## License
 
