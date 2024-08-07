@@ -1,7 +1,4 @@
-
 ViewComponentToolkit::Engine.routes.draw do
- # config/routes.rb
-if Rails.env.development?
-  mount Lookbook::Engine, at: '/lookbook'
-end
+
+  mount Lookbook::Engine, at: '/lookbook' if Rails.env.development?
 end

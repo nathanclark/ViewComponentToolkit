@@ -4,6 +4,10 @@ require 'view_component_toolkit/engine'
 require 'rake'
 require_relative 'view_component_toolkit/version'
 require_relative '../app/components/view_component_toolkit/simple_sample'
+require "view_component_toolkit/configuration"
+require "view_component_toolkit/themes/base"
+require "view_component_toolkit/themes/default"
+
 
 
 module ViewComponentToolkit

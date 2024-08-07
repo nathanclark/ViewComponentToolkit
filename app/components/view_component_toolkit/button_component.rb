@@ -1,4 +1,3 @@
-# app/components/view_component_toolkit/button_component.rb
 module ViewComponentToolkit
   class ButtonComponent < ViewComponent::Base
     def initialize(text:)
@@ -12,7 +11,16 @@ module ViewComponentToolkit
     private
 
     def current_theme
-      ViewComponentToolkit.configuration.theme
+      case ViewComponentToolkit.configuration.theme
+      when :bootstrap
+        Themes::Bootstrap.new
+      when :tailwind
+        Themes::Tailwind.new
+      when :default
+        Themes::Default.new
+      else
+        ViewComponentToolkit.configuration.theme.new
+      end
     end
   end
 end
