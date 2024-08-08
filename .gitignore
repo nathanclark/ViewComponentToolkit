@@ -6,3 +6,5 @@
 /pkg/
 /spec/reports/
 /tmp/
+spec/dummy/tmp/pids/server.pid
+spec/dummy/log/development.log
