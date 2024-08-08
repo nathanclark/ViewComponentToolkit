@@ -1,6 +1,6 @@
 <div class="<%= file_name %>-component">
-  <!-- Add component HTML here -->
+  <!-- Add your component HTML here -->
   <% attributes.each do |attribute| %>
-    <%= attribute.name %>: <%= "<%= @#{attribute.name} %>" %>
+    <%= attribute.name %>: <%= "<%%= @#{attribute.name} %%>" %>
   <% end %>
 </div>

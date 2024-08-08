@@ -7,8 +7,10 @@ require_relative '../app/components/view_component_toolkit/simple_sample'
 require "view_component_toolkit/configuration"
 require "view_component_toolkit/themes/base"
 require "view_component_toolkit/themes/default"
-
-
+require "generators/view_component_toolkit/component/component_generator"
+if defined?(Rails)
+  require "generators/view_component_toolkit/component/component_generator"
+end
 
 module ViewComponentToolkit
   class Engine < ::Rails::Engine
