@@ -1,21 +1,13 @@
 module ViewComponentToolkit
   class HeroComponent < ViewComponent::Base
 
-    attr_reader :title
-
-    attr_reader :summary
-
-    attr_reader :body
+    attr_reader :title,:subtitle,:background_image
 
 
-    def initialize(title:, summary:, body:)
-
+    def initialize(title:, subtitle:, background_image:)
       @title = title
-
-      @summary = summary
-
-      @body = body
-
+      @subtitle = subtitle
+      @background_image = background_image
     end
 
     private

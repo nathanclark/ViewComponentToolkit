@@ -1,9 +1,10 @@
 module ViewComponentToolkit
   class Configuration
-    attr_accessor :theme
+    attr_accessor :theme, :custom_themes
 
     def initialize
       @theme = :default
+      @custom_themes = {}
     end
   end
 

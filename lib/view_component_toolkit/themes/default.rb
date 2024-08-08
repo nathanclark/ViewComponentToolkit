@@ -8,6 +8,18 @@ module ViewComponentToolkit
       def card_class
         "bg-white shadow rounded p-4"
       end
+
+      def component_class
+
+      end
+
+      def title_class
+
+      end
+
+      def subtitle_class
+
+      end
     end
   end
 end
@@ -22,6 +34,19 @@ module ViewComponentToolkit
       def card_class
         "card"
       end
+
+      def component_class
+
+      end
+
+      def title_class
+
+      end
+
+      def subtitle_class
+
+      end
+
     end
   end
 end
@@ -35,6 +60,18 @@ module ViewComponentToolkit
 
       def card_class
         "bg-white shadow-md rounded-lg p-6"
+      end
+
+      def component_class
+
+      end
+
+      def title_class
+
+      end
+
+      def subtitle_class
+
       end
     end
   end

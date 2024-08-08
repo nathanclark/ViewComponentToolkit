@@ -1,6 +1,9 @@
-<div class="hero_component-component">
-  <!-- Add your component HTML here -->
-  title: <%= @title %><br>
-  summary: <%= @summary %>
-  body: <%= @body %>
-</div>
+<section class="<%= component_class %>" style="<%= "background-image: url(#{background_image});" if background_image %>">
+  <div class="hero-content">
+    <h1 class="<%= title_class %>"><%= title %></h1>
+    <% if subtitle %>
+      <p class="<%= subtitle_class %>"><%= subtitle %></p>
+    <% end %>
+    <%= content %>
+  </div>
+</section>

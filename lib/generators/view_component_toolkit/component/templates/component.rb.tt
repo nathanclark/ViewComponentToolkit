@@ -1,0 +1,13 @@
+module ViewComponentToolkit
+  class <%= class_name %>Component < ViewComponentToolkit::BaseComponent
+    def initialize(<%= attributes.map { |a| "#{a.name}:" }.join(", ") %>)
+      <%= attributes.map { |a| "@#{a.name} = #{a.name}" }.join("\n      ") %>
+    end
+
+    def call
+      content_tag :div, class: Theme.get_class(:<%= file_name %>) do
+        #
+      end
+    end
+  end
+end
