@@ -30,6 +30,7 @@ gem 'importmap-rails'
 gem 'turbo-rails'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+gem 'listen', '~> 3.8', group: :development
 gem 'stimulus-rails'
 
 # Use Active Model has_secure_password

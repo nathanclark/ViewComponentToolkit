@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Gem",
+            "type": "rdbg",
+            "request": "launch",
+            "script": "${workspaceRoot}/spec/dummy/bin/rails",
+            "args": [
+                "server"
+            ],
+            "askParameters": false,
+            "useBundler": true,
+            "cwd": "${workspaceRoot}/spec/dummy"
+        },
+        {
+            "name": "Debug Specific Component",
+            "type": "rdbg",
+            "request": "launch",
+            "script": "${workspaceRoot}/spec/dummy/bin/rails",
+            "args": [
+                "runner",
+                "${workspaceRoot}/path/to/your/debug_script.rb"
+            ],
+            "askParameters": false,
+            "useBundler": true,
+            "cwd": "${workspaceRoot}/spec/dummy"
+        }
+    ]
+}
