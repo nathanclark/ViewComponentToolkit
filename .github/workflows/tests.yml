@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['3.3']
+        ruby-version: ['3.0', '3.1', '3.2', '3.3']
 
     steps:
     - uses: actions/checkout@v3
@@ -25,7 +25,17 @@ jobs:
     - name: Run tests
       run: |
         bundle exec rake test | tee test_output.log
-        echo "TEST_RESULTS=$(grep -oP '(\d+) assertions, \d+ errors, \d+ failures, \d+ skips' test_output.log)" >> $GITHUB_ENV
+    - name: Parse test results
+      run: |
+        echo "TEST_RESULTS=$(ruby -e '
+          log = File.read("test_output.log")
+          runs = log.scan(/(\d+) runs/).flatten.map(&:to_i).sum
+          assertions = log.scan(/(\d+) assertions/).flatten.map(&:to_i).sum
+          failures = log.scan(/(\d+) failures/).flatten.map(&:to_i).sum
+          errors = log.scan(/(\d+) errors/).flatten.map(&:to_i).sum
+          skips = log.scan(/(\d+) skips/).flatten.map(&:to_i).sum
+          puts "#{runs} runs, #{assertions} assertions, #{failures} failures, #{errors} errors, #{skips} skips"
+        ')" >> $GITHUB_ENV
     - name: Create test results badge
       uses: schneegans/dynamic-badges-action@v1.7.0
       with:
@@ -34,4 +44,4 @@ jobs:
         filename: test_results.json
         label: Tests
         message: ${{ env.TEST_RESULTS }}
-        color: green
+        color: ${{ env.TEST_RESULTS == '0 runs, 0 assertions, 0 failures, 0 errors, 0 skips' && 'yellow' || env.TEST_RESULTS == '' && 'red' || contains(env.TEST_RESULTS, 'failures') || contains(env.TEST_RESULTS, 'errors') && 'red' || 'green' }}
