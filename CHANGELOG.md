@@ -1,5 +1,7 @@
 ## [Unreleased]
 
-## [0.1.0] - 2024-08-01
+## [0.1.1] - 2024-08-13
 
 - Initial release
+- Added HeroComponent
+- Implemented theme system
