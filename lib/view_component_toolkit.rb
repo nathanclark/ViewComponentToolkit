@@ -9,6 +9,7 @@ require 'view_component_toolkit/theme'
 require 'view_component_toolkit/themes/base'
 require 'view_component_toolkit/themes/default'
 require 'generators/view_component_toolkit/component/component_generator'
+require "generators/view_component_toolkit/override/override_generator"
 if defined?(Rails)
   require 'generators/view_component_toolkit/component/component_generator'
 end
