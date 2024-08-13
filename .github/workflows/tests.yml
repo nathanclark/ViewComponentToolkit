@@ -27,7 +27,7 @@ jobs:
         bundle exec rake test | tee test_output.log
         echo "TEST_RESULTS=$(grep -oP '(\d+) assertions, \d+ errors, \d+ failures, \d+ skips' test_output.log)" >> $GITHUB_ENV
     - name: Create test results badge
-      uses: schneegans/dynamic-badges-action@v1.6.0
+      uses: schneegans/dynamic-badges-action@v1.7.0
       with:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: ac922546bfc70590e78705eeeaaa0c76
