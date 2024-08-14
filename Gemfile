@@ -7,7 +7,7 @@ gemspec
 
 gem 'rake', '~> 13.0'
 
-gem 'listen'
+gem 'listen', '~> 3.8'
 gem 'minitest', '~> 5.0'
 # Add development dependencies
 group :development do
