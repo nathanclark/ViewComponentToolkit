@@ -1,0 +1,29 @@
+<%= button_tag button_text, type: 'button', class: 'btn btn-primary', data: { bs_toggle: 'modal', bs_target: "##{modal_id}" } %>
+
+<%= render(ViewComponentToolkit::ModalComponent.new(id: modal_id, classes: theme_based_modal_classes)) do |modal| %>
+  <% modal.with_header do %>
+    <h5 class="modal-title"><%= modal_title %></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <% end %>
+
+  <% modal.with_body do %>
+    <%= modal_body %>
+  <% end %>
+
+  <% modal.with_footer do %>
+    <%= modal_footer %>
+  <% end %>
+<% end %>
+
+<% content_for :footer_scripts do %>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const modal = document.getElementById('<%= modal_id %>');
+      const modalInstance = new bootstrap.Modal(modal);
+
+      document.querySelector('[data-bs-target="#<%= modal_id %>"]').addEventListener('click', function() {
+        modalInstance.show();
+      });
+    });
+  </script>
+<% end %>

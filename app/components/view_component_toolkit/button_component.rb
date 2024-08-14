@@ -1,26 +1,16 @@
 module ViewComponentToolkit
-  class ButtonComponent < ViewComponent::Base
-    def initialize(text:)
+  class ButtonComponent < ViewComponentToolkit::BaseComponent
+    component :button
+
+    attr_reader :text, :classes
+
+    def initialize(text:, classes: '')
       @text = text
+      @classes = classes
     end
 
     def call
-      content_tag :button, @text, class: current_theme.button_class
-    end
-
-    private
-
-    def current_theme
-      case ViewComponentToolkit.configuration.theme
-      when :bootstrap
-        Themes::Bootstrap.new
-      when :tailwind
-        Themes::Tailwind.new
-      when :default
-        Themes::Default.new
-      else
-        ViewComponentToolkit.configuration.theme.new
-      end
+      content_tag :button, @text, class: "#{theme_classes} #{@classes}"
     end
   end
 end

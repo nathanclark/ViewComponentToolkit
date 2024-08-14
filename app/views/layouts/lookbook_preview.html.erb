@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ViewComponentToolkit Preview</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <% if ViewComponentToolkit.configuration.theme == :bootstrap %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <% elsif ViewComponentToolkit.configuration.theme == :tailwind %>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <% end %>
+
+  <%= yield :head %>
+</head>
+<body>
+  <%= yield %>
+
+  <% if ViewComponentToolkit.configuration.theme == :bootstrap %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <% end %>
+
+  <%= yield :footer_scripts %>
+</body>
+</html>

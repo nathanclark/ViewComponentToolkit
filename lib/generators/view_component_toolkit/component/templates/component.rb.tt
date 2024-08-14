@@ -1,12 +1,20 @@
 module ViewComponentToolkit
   class <%= class_name %>Component < ViewComponentToolkit::BaseComponent
+    component :<%= file_name.underscore %>
+
+    <% attributes.each do |attribute| %>
+    attr_reader :<%= attribute.name %>
+    <% end %>
+
     def initialize(<%= attributes.map { |a| "#{a.name}:" }.join(", ") %>)
-      <%= attributes.map { |a| "@#{a.name} = #{a.name}" }.join("\n      ") %>
+      <% attributes.each do |attribute| %>
+      @<%= attribute.name %> = <%= attribute.name %>
+      <% end %>
     end
 
     def call
-      content_tag :div, class: Theme.get_class(:<%= file_name %>) do
-        #
+      content_tag :<%= file_name.dasherize %>, class: theme_classes do
+        content
       end
     end
   end

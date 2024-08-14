@@ -27,8 +27,10 @@ module ViewComponentToolkit
       }
     }
 
-    def self.get_class(component, theme = ViewComponentToolkit.configuration.theme)
+    def self.get_class(component)
+      theme = ViewComponentToolkit.configuration.theme
       custom_themes = ViewComponentToolkit.configuration.custom_themes
+
       theme_hash = custom_themes[theme] || DEFAULT_THEMES[theme] || DEFAULT_THEMES[:default]
       theme_hash[component] || DEFAULT_THEMES[:default][component]
     end
