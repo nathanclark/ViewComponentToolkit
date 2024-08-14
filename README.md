@@ -1,8 +1,15 @@
-# ViewComponentToolkit
+<h1 align="center">ViewComponentToolkit</h1>
+<p align="center">
+  <i>ViewComponentToolkit is tooling to make it easier for developers to build and maintain UI components</i>
+  <br/><br/>
+  <img width="130" alt="ViewComponentToolkit" src="https://github.com/nathanclark/ViewComponentToolkit/blob/599254699da36bb8312428a562a766f3d77c9bb5/logo_150p.gif"/>
 
-![alt text](logo_150p.gif "Logo")
+  <br/><br/>
+  
+</p>
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/view_component_toolkit`. To experiment with that code, run `bin/console` for an interactive prompt.
+
+
 
 ![Test Results](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/nathanclark/ac922546bfc70590e78705eeeaaa0c76/raw/test_results.json)
 
