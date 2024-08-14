@@ -1,4 +1,4 @@
-# ViewComponentToolkit
+<h1 align='center'>ViewComponentToolkit</h1>
 <p align="center">
   <i>A flexible and customizable toolkit for building reusable ViewComponents in Ruby on Rails applications</i>
   <br/><br/>
