@@ -37,7 +37,7 @@ jobs:
 
     - name: Push to GitHub Packages
       run: |
-        GEM_NAME=$(ls *.gem | head -n 1)
+        GEM_NAME=$(ls -r *.gem | head -n 1)
         OWNER="${GITHUB_REPOSITORY_OWNER}"
         GITHUB_TOKEN="${{ secrets.GITHUB }}"
         
