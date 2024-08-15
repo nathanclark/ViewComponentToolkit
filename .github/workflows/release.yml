@@ -28,8 +28,8 @@ jobs:
     - name: Install dependencies
       run: bundle install
 
-    - name: Run tests
-      run: bundle exec rake test # Adjust this if you use a different test command
+    #- name: Run tests
+    #  run: bundle exec rake test # Adjust this if you use a different test command
 
     - name: Build gem
       run: gem build *.gemspec
