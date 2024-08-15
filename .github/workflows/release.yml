@@ -38,7 +38,11 @@ jobs:
     - name: Push to GitHub Packages
       run: |
         GEM_NAME=$(ls *.gem | head -n 1)
-        gem push --key github --host https://rubygems.pkg.github.com/${{ github.repository_owner }} $GEM_NAME
+        mkdir -p $HOME/.gem
+        touch $HOME/.gem/credentials
+        chmod 0600 $HOME/.gem/credentials
+        printf -- "---\n:github: Bearer ${GITHUB_TOKEN}\n" > $HOME/.gem/credentials
+        gem push --host https://rubygems.pkg.github.com/${GITHUB_REPOSITORY_OWNER} $GEM_NAME
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
