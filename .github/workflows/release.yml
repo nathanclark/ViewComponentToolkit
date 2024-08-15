@@ -15,16 +15,18 @@ jobs:
       with:
         ruby-version: 3.2 # Adjust this to your preferred Ruby version
 
-    - name: Configure Bundler
-      run: bundle config set --local frozen false
-
-    - name: Update Gemfile.lock
-      run: bundle update --bundler
-
     - name: Install dependencies
       run: |
         gem install bundler
-        bundle install
+
+    - name: Unfreeze bundler
+      run: bundle config set frozen false
+      
+    - name: Update Gemfile.lock
+      run: bundle update
+      
+    - name: Install dependencies
+      run: bundle install
 
     - name: Run tests
       run: bundle exec rake test # Adjust this if you use a different test command
