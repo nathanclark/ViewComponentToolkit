@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    view_component_toolkit (0.1.16)
+    view_component_toolkit (0.1.17)
       rails (>= 7.0)
       view_component (>= 2.0)
 
