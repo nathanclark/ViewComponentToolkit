@@ -21,6 +21,16 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
     - name: Install dependencies
+      run: |
+          gem install bundler
+  
+    - name: Unfreeze bundler
+      run: bundle config set frozen false
+        
+    - name: Update Gemfile.lock
+      run: bundle update
+        
+    - name: Install dependencies
       run: bundle install
     - name: Run tests
       run: |
