@@ -38,13 +38,18 @@ jobs:
     - name: Push to GitHub Packages
       run: |
         GEM_NAME=$(ls *.gem | head -n 1)
-        mkdir -p $HOME/.gem
-        touch $HOME/.gem/credentials
-        chmod 0600 $HOME/.gem/credentials
-        printf -- "---\n:github: Bearer ${GITHUB_TOKEN}\n" > $HOME/.gem/credentials
-        gem push --host https://rubygems.pkg.github.com/${GITHUB_REPOSITORY_OWNER} $GEM_NAME
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        OWNER="${GITHUB_REPOSITORY_OWNER}"
+        GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}"
+        
+        RESPONSE=$(curl -s -u "${OWNER}:${GITHUB_TOKEN}" -H "Content-Type: application/octet-stream" --data-binary @"${GEM_NAME}" "https://rubygems.pkg.github.com/${OWNER}/api/v1/gems")
+        
+        if echo "$RESPONSE" | grep -q '"success":true'; then
+          echo "Successfully pushed ${GEM_NAME} to GitHub Packages"
+        else
+          echo "Failed to push ${GEM_NAME} to GitHub Packages"
+          echo "Response: $RESPONSE"
+          exit 1
+        fi
 
     - name: Push to RubyGems
       run: |
