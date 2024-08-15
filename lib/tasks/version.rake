@@ -16,7 +16,7 @@ namespace :version do
 
     system("git add #{version_file}")
     system("git commit -m 'Bump version to #{new_version}'")
-    system("git tag v#{new_version}")
+    #system("git tag v#{new_version}")
 
     puts "Version bumped to #{new_version}"
     puts "Don't forget to push with tags: git push origin main --tags"
