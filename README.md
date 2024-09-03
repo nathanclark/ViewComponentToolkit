@@ -4,7 +4,7 @@
   <img width="130" alt="ViewComponentToolkit" src="https://github.com/nathanclark/ViewComponentToolkit/blob/599254699da36bb8312428a562a766f3d77c9bb5/logo_150p.gif"/>
   <br/><br/>
 </p>
-Show Image
+
 ## Features
 
 Customizable theming system with support for default, Bootstrap, and Tailwind CSS
